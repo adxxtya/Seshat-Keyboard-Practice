@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
@@ -9,7 +10,7 @@ function Navbar() {
 
   return (
     <nav className="bg-[#DECFC8] h-[8vh] p-4 flex justify-between">
-      <a href="/" className="text-4xl font-semibold">Seshat</a>
+      <Link href="/" className="text-4xl font-semibold">Seshat</Link>
       <div className="flex gap-2">
         <a
           href="https://www.linkedin.com/in/adxxtya/"

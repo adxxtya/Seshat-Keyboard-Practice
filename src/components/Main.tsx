@@ -68,15 +68,9 @@ const handleKeyPress = (event: { key: string }) => {
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
     };
-  }, [alphabet]);
+  }, [alphabet, handleKeyPress]);
 
-  useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * textOptions.length);
-    setRandomTextOption(textOptions[randomIndex]);
-    if (play && numberOfKeys > 0) {
-      startGame();
-    }
-  }, [play, numberOfKeys]);
+
 
   const textOptions = [
     "Enhance Your Typing Speed and Accuracy through Continuous Practice",
@@ -100,6 +94,14 @@ const handleKeyPress = (event: { key: string }) => {
     "Dive into the Art of Typing and Witness Exponential Growth",
     "Hone Your Typing Skills and Conquer Any Keyboard Challenge",
   ];
+
+    useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * textOptions.length);
+    setRandomTextOption(textOptions[randomIndex]);
+    if (play && numberOfKeys > 0) {
+      startGame();
+    }
+  }, [play, numberOfKeys, textOptions, startGame]);
 
   return (
     <>
