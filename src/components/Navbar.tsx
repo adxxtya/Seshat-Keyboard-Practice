@@ -1,24 +1,33 @@
-import React from 'react'
-import { FaLinkedin, FaGithubSquare } from 'react-icons/fa'
+import React from "react";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 function Navbar() {
+  const iconStyle = {
+    width: "36px",
+    height: "36px",
+  };
 
-    const iconStyle = {
-        width: '36px', 
-        height: '36px', 
-    }; 
-
-    return (
-        <nav className='bg-[#DECFC8] h-[6vh] p-2 flex justify-between'>
-            <p className='text-3xl font-semibold'>
-                Seshat
-            </p>
-            <div className='flex gap-2'>
-                <FaLinkedin style={iconStyle}  />
-                <FaGithubSquare style={iconStyle} />
-            </div>
-        </nav>
-    )
+  return (
+    <nav className="bg-[#DECFC8] h-[8vh] p-4 flex justify-between">
+      <a href="/" className="text-4xl font-semibold">Seshat</a>
+      <div className="flex gap-2">
+        <a
+          href="https://www.linkedin.com/in/adxxtya/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin style={iconStyle} />
+        </a>
+        <a
+          href="https://github.com/adxxtya"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithubSquare style={iconStyle} />
+        </a>
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
