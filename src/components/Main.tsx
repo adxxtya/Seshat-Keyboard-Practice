@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 
 function Main() {
@@ -113,7 +114,9 @@ const handleKeyPress = (event: { key: string }) => {
               <p>
                 Correct Count: {correctCount}/{attempts}
               </p>
-              <p>Wrong Count: {wrongCount}</p>
+              <p style={{ color: isWrong ? "red" : "green" }}>
+                Wrong Count: {wrongCount}
+              </p>
             </div>
            <div className="w-[15%] flex flex-col items-center min-h-full overflow-scroll bg-[#D3C4BD]">
   <p className="text-xl">Time Intervals:</p>
